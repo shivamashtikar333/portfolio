@@ -3,9 +3,11 @@ import Spline from "@splinetool/react-spline/next";
 
 export default function SplineScene() {
   return (
-    <Spline
-      className="absolute lg:top-0 top-[-20%] bottom-0 lg:left-[32%] sm:left-[-2%] h-full w-full pointer-events-none"
-      scene="https://prod.spline.design/MQe9GVjC7GwhNZnw/scene.splinecode"
-    />
+    <div className="flex w-full h-full lg:h-4/5 items-center mt-10 lg:mt-0 ">
+      <Spline
+        scene="https://prod.spline.design/MQe9GVjC7GwhNZnw/scene.splinecode"
+        className="relative md:top-[20%] lg:top-0"
+      />
+    </div>
   );
 }
