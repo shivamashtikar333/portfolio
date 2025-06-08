@@ -1,7 +1,8 @@
 // "use client";
 import { Download, Gem, SquareArrowOutUpRight } from "lucide-react";
 import Link from "next/link";
-import Spline from "@splinetool/react-spline/next";
+// import Spline from "@splinetool/react-spline/next";
+import SplineScene from "./SplineScene";
 
 const Hero = () => {
   return (
@@ -10,16 +11,16 @@ const Hero = () => {
       className="flex lg:mt-20 flex-col lg:flex-row items-center justify-between min-h-[calc(90vh-6rem)]"
     >
       <div className="max-w-xl ml-[5%] z-10 mt-[90%] md:mt-[60%] lg:mt-0">
-        <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-6xl font-semibold tracking-wider mb-2 text-black">
+        <h1 className="text-3xl sm:text-xl md:text-4xl lg:text-6xl font-semibold tracking-wider mb-2 text-black">
           Hello
-          <span className="text-3xl sm:text-4xl md:text-4xl lg:text-6xl font-semibold tracking-wider text-orange-500">
+          <span className="text-3xl sm:text-xl md:text-4xl lg:text-6xl font-semibold tracking-wider text-orange-500">
             {" "}
             I'm Shivam
           </span>
         </h1>
 
         {/* Subtitle */}
-        <p className="text-2xl sm:text-3xl md:text-3xl lg:text-5xl font-medium tracking-wider text-gray-400 mb-6">
+        <p className="text-2xl sm:text-xl md:text-3xl lg:text-5xl font-medium tracking-wider text-gray-400 mb-6">
           Software Developer
         </p>
         <div className="relative w-[95%] sm:w-48 h-10 bg-gradient-to-r from-[#656565] to-[#e99b63] rounded-full shadow-[0_0_15px_rgba(255,255,255,0.4)]">
@@ -48,10 +49,11 @@ const Hero = () => {
           </Link>
         </div>
       </div>
-      <Spline
+      {/* <Spline
         className="absolute lg:top-0 top-[-20%] bottom-0 lg:left-[25%] sm:left-[-2%] h-full"
         scene="https://prod.spline.design/MQe9GVjC7GwhNZnw/scene.splinecode"
-      />
+      /> */}
+      <SplineScene />
     </main>
   );
 };
