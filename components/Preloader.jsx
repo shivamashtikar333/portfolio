@@ -9,7 +9,7 @@ const Preloader = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.to(arcRef.current, {
-        height: "100%",
+        height: "100vh", // use viewport units for responsiveness
         duration: 1.5,
         ease: "power2.inOut",
         onComplete: () => {
@@ -31,7 +31,7 @@ const Preloader = () => {
     <div className="preloader fixed inset-0 z-[100] bg-black overflow-hidden flex items-end">
       <div
         ref={arcRef}
-        className="w-full h-0 bg-[#f5f5dc] rounded-t-full"
+        className="w-full h-0 bg-[#f5f5dc] rounded-t-[100%] transition-all"
       ></div>
     </div>
   );
