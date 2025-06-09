@@ -7,7 +7,7 @@ const LandingPage = () => {
   return (
     <main
       id="hero"
-      className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-14 h-[95vh] w-full px-6 lg:px-12 "
+      className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-14 h-[100vh] w-full px-6 lg:px-12 "
     >
       {/* LEFT SECTION: TEXT */}
       <div className="w-full mt-16 sm:mt-24 md:mt-28 lg:mt-0 px-4 sm:px-6 md:px-10 z-10">
