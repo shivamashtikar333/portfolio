@@ -7,19 +7,12 @@ import Project from "@/components/Project";
 
 export default function Home() {
   return (
-    <main className="bg-[#fefbf8]">
-      <section className="">
-        <LandingPage />
-      </section>
-      <section>
-        <About />
-      </section>
-      <section
-        className=" bg-black rounded-t-[30%] z-10 min-h-screen"
-        id="project"
-      >
-        <Project />
-      </section>
+    <main className="bg-[#fefbf8] h-[100vh]">
+      <LandingPage />
+
+      <About />
+
+      <Project />
     </main>
   );
 }

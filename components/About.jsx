@@ -17,38 +17,13 @@ import {
   SiExpress,
 } from "react-icons/si";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-// import Project from "./Project";
+import Project from "./Project";
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
   const sliderRef = useRef(null);
   const aboutRef = useRef(null);
-
-  // useEffect(() => {
-  //   const ctx = gsap.context(() => {
-  //     const aboutSection = aboutRef.current;
-  //     const projectSection = document.querySelector("#project");
-
-  //     gsap.set(projectSection, { yPercent: 100 });
-
-  //     ScrollTrigger.create({
-  //       trigger: aboutSection,
-  //       start: "bottom bottom",
-  //       end: "bottom 80%",
-  //       scrub: true,
-  //       markers: true, // remove in prod
-  //       onUpdate: (self) => {
-  //         gsap.to(projectSection, {
-  //           yPercent: 0,
-  //           ease: "power2.out",
-  //           duration: 1,
-  //         });
-  //       },
-  //     });
-  //   }, aboutRef);
-
-  //   return () => ctx.revert();
-  // }, []);
+  // const wrapperRef = useRef(null);
 
   useEffect(() => {
     gsap.to(sliderRef.current, {
@@ -58,6 +33,23 @@ const About = () => {
       repeat: -1,
       yoyo: true,
     });
+
+    const ctx = gsap.context(() => {
+      gsap.to(aboutRef.current, {
+        opacity: 0.6,
+        scale: 0.8,
+        ease: "none",
+        scrollTrigger: {
+          trigger: aboutRef.current,
+          start: "top -30%",
+          end: "bottom-=5% top",
+          scrub: true,
+          markers: true, // for debugging, remove later
+        },
+      });
+    }, aboutRef);
+
+    return () => ctx.revert();
   }, []);
 
   return (
@@ -65,13 +57,13 @@ const About = () => {
       <section
         ref={aboutRef}
         id="about"
-        className="h-[100vh] px-4 sm:px-6 lg:px-12 xl:px-20 py-16 flex flex-col lg:flex-row gap-12 justify-between items-center max-w-7xl mx-auto"
+        className="min-h screen bg-black px-4 sm:px-6 lg:px-12 xl:px-20 py-16 flex flex-col lg:flex-row gap-12 justify-between items-center max-w-7xl mx-auto -z-10"
       >
         {/* Left section */}
         <div className="flex-1 space-y-4">
           <p className="text-orange-500 font-mono text-lg hidden md:block">{`<about>`}</p>
 
-          <h1 className="text-4xl lg:text-6xl font-bold leading-snug max-sm:text-center">
+          <h1 className="text-4xl lg:text-6xl font-bold leading-snug max-sm:text-center text-gray-200">
             About Me
           </h1>
           <p className="text-orange-500 font-mono text-lg md:hidden">{`</Techstack>`}</p>
@@ -177,8 +169,10 @@ const About = () => {
         {/* Right section */}
         <div className="flex-1 space-y-12 max-w-xl">
           <div>
-            <h2 className="text-2xl font-bold mb-2">My Development Focus</h2>
-            <p className="text-gray-700">
+            <h2 className="text-2xl font-bold mb-2 text-orange-500">
+              My Development Focus
+            </h2>
+            <p className="text-gray-500">
               I am a dedicated developer focused on building impactful web and
               mobile applications. My entry into this field was driven by a keen
               interest in crafting functional and engaging digital experiences.
@@ -190,8 +184,10 @@ const About = () => {
             </p>
           </div>
           <div>
-            <h2 className="text-2xl font-bold mb-4">My Approach</h2>
-            <p className="text-gray-700 mb-6">
+            <h2 className="text-2xl font-bold mb-4 text-orange-500">
+              My Approach
+            </h2>
+            <p className="text-gray-500 mb-6">
               My approach to development prioritizes both technical excellence
               and user needs. Every line of code aims to create value, whether
               through improved performance, enhanced accessibility, or more
@@ -229,7 +225,7 @@ const About = () => {
         </div>
       </section>
       {/* <section
-        className="h-[100vh] bg-black rounded-t-[30%] z-10 relative"
+        className="min-h-screen bg-[#fff4eb] relative z-10 flex items-center justify-center"
         id="project"
       >
         <Project />
