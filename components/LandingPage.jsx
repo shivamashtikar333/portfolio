@@ -44,7 +44,7 @@ const LandingPage = () => {
               Resume <Download />
             </a>
             <Link
-              href={"#"}
+              href={"#contact"}
               className="border border-[#2a2a2a] py-2 sm:py-3 px-8 sm:px-10 rounded-full sm:text-lg text-sm font-semibold tracking-wider transition-all duration-300 hover:bg-[#1a1a1a] bg-orange-600 text-black hover:text-orange-600
             flex gap-2 items-center"
             >

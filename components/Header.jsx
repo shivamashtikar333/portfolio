@@ -7,8 +7,6 @@ import { Button } from "./ui/button";
 import gsap from "gsap";
 
 export default function Header() {
-  const navlinks = ["home", "projects", "about", "contact"];
-
   const [isOpen, setIsOpen] = useState(false);
   const headerRef = useRef(null);
 
@@ -51,20 +49,9 @@ export default function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-6 font-medium">
-          {navlinks.map((section) => (
-            <Link
-              key={section}
-              href={`#${section}`}
-              className="hover:text-orange-600 transition-all "
-              onMouseMove={handleMouseMove}
-              onMouseLeave={handleMouseLeave}
-            >
-              {section.charAt(0).toUpperCase() + section.slice(1)}
-            </Link>
-          ))}
+        <nav className="flex items-center gap-6 font-medium">
           <Link
-            href={"#"}
+            href={"/blogs"}
             target="_blank"
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
@@ -78,26 +65,9 @@ export default function Header() {
         </nav>
 
         {/* Mobile Menu Icon */}
-        <button onClick={() => setIsOpen(!isOpen)} className="md:hidden">
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
       </div>
 
       {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden bg-[#fefbf8] px-4 pb-4 space-y-2">
-          {["home", "projects", "about", "contact"].map((section) => (
-            <Link
-              key={section}
-              href={`#${section}`}
-              className="block"
-              onClick={() => setIsOpen(false)}
-            >
-              {section.charAt(0).toUpperCase() + section.slice(1)}
-            </Link>
-          ))}
-        </div>
-      )}
     </header>
   );
 }

@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, MapPin, Github, Linkedin, Twitter, Globe } from "lucide-react";
+import Link from "next/link";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -48,7 +49,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#fefbf8] text-white">
+    <div className="min-h-screen bg-[#fefbf8] text-white" id="contact">
       <div className="container mx-auto px-4 py-8">
         <div className="grid lg:grid-cols-2 gap-8 ">
           {/* Left Side - Contact Info */}
@@ -92,34 +93,33 @@ export default function ContactPage() {
             </div>
 
             <div className="flex gap-4">
-              <Button
-                variant="ghost"
-                size="icon"
-                className="w-12 h-12 bg-black hover:bg-orange-600 hover:text-black cursor-pointer"
-              >
-                <Github className="w-5 h-5" />
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="w-12 h-12 bg-black hover:bg-orange-600 hover:text-black cursor-pointer"
-              >
-                <Linkedin className="w-5 h-5" />
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="w-12 h-12 bg-black hover:bg-orange-600 hover:text-black cursor-pointer"
-              >
-                <Twitter className="w-5 h-5" />
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="w-12 h-12 bg-black hover:bg-orange-600 hover:text-black cursor-pointer"
-              >
-                <Globe className="w-5 h-5" />
-              </Button>
+              <Link href={"https://github.com/shivamashtikar333"}>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="w-12 h-12 bg-black hover:bg-orange-600 hover:text-black cursor-pointer"
+                >
+                  <Github className="w-5 h-5" />
+                </Button>
+              </Link>
+              <Link href={"https://www.linkedin.com/in/shivam-ashtikar/"}>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="w-12 h-12 bg-black hover:bg-orange-600 hover:text-black cursor-pointer"
+                >
+                  <Linkedin className="w-5 h-5" />
+                </Button>
+              </Link>
+              <Link href={"#"}>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="w-12 h-12 bg-black hover:bg-orange-600 hover:text-black cursor-pointer"
+                >
+                  <Globe className="w-5 h-5" />
+                </Button>
+              </Link>
             </div>
 
             <div className="text-orange-500 font-mono text-lg">
