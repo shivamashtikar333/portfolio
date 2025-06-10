@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${bricolage.variable}  antialiased`}>
         <Preloader />
-        <section className="fixed top-0 w-full z-[9999]">
+        <section className="fixed top-0 w-full z-50">
           <Header />
         </section>
         {children}

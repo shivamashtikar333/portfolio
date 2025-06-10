@@ -35,13 +35,14 @@ const LandingPage = () => {
             building real-world solutions.
           </p>
 
-          <div className="flex flex-wrap gap-4 mt-12">
-            <Link
-              href={"#"}
+          <div className="flex flex-wrap gap-4 my-10">
+            <a
+              href="/resume.pdf"
+              download
               className="border border-[#2a2a2a] py-2 sm:py-3 px-4 sm:px-4 rounded-full sm:text-lg text-sm font-semibold tracking-wider transition-all duration-300 hover:bg-[#1a1a1a] hover:text-white flex gap-2 items-center"
             >
               Resume <Download />
-            </Link>
+            </a>
             <Link
               href={"#"}
               className="border border-[#2a2a2a] py-2 sm:py-3 px-8 sm:px-10 rounded-full sm:text-lg text-sm font-semibold tracking-wider transition-all duration-300 hover:bg-[#1a1a1a] bg-orange-600 text-black hover:text-orange-600

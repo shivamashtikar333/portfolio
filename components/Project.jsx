@@ -38,21 +38,22 @@ const Project = () => {
   return (
     <div
       ref={projectRef}
-      className="overflow-x-hidden min-h-[100vh] bg-black rounded-t-3xl px-6 py-16"
+      className="overflow-x-hidden min-h-[100vh] bg-[#fefbf8] rounded-t-3xl px-6 py-16"
     >
       <div className="h-8 w-full"></div>
-      <h1 className="text-4xl font-bold text-center mb-14 text-gray-400">
+
+      <h1 className="text-4xl font-bold text-center mb-14 text-orange-600">
         Projects
       </h1>
 
-      <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
+      <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10 bg-black rounded-xl ">
         {projects.map((item) => (
           <div
-            className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
+            className="lg:min-h-[34rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw] lg:pb-5"
             key={item.id}
           >
             <PinContainer title={item.link} href={item.link}>
-              <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
+              <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10 bg-black">
                 <div
                   className="relative w-full h-full overflow-hidden lg:rounded-3xl"
                   style={{ backgroundColor: "#13162D" }}

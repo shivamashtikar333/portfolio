@@ -1,6 +1,7 @@
 // import Header from "@/components/Header";
 // import Preloader from "@/components/Preloader";
 import About from "@/components/About";
+import ContactForm from "@/components/ContacForm";
 import LandingPage from "@/components/LandingPage";
 import Project from "@/components/Project";
 // import { useState } from "react";
@@ -13,6 +14,8 @@ export default function Home() {
       <About />
 
       <Project />
+
+      <ContactForm />
     </main>
   );
 }

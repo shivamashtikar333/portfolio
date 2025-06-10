@@ -17,7 +17,6 @@ import {
   SiExpress,
 } from "react-icons/si";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Project from "./Project";
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
@@ -57,7 +56,7 @@ const About = () => {
       <section
         ref={aboutRef}
         id="about"
-        className="min-h screen bg-black px-4 sm:px-6 lg:px-12 xl:px-20 py-16 flex flex-col lg:flex-row gap-12 justify-between items-center max-w-7xl mx-auto "
+        className="min-h rounded-xl screen bg-black px-4 sm:px-6 lg:px-12 xl:px-20 py-16 flex flex-col lg:flex-row gap-12 justify-between items-center max-w-7xl mx-auto "
       >
         {/* Left section */}
         <div className="flex-1 space-y-4">

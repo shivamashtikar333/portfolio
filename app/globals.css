@@ -47,6 +47,7 @@
 body {
   /* overflow-x: hidden; */
   font-family: var(--font-bricolage);
+  scroll-behavior: smooth;
 }
 
 :root {
