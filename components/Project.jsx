@@ -40,8 +40,6 @@ const Project = () => {
       ref={projectRef}
       className="overflow-x-hidden min-h-[100vh] bg-[#fefbf8] rounded-t-3xl px-6 py-16"
     >
-      <div className="h-8 w-full"></div>
-
       <h1 className="text-4xl font-bold text-center mb-14 text-orange-600">
         Projects
       </h1>

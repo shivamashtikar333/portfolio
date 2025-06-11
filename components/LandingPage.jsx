@@ -7,20 +7,20 @@ const LandingPage = () => {
   return (
     <main
       id="hero"
-      className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-14 h-[100vh] w-full px-6 lg:px-12 "
+      className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-14 min-h-screen w-full px-6 lg:px-12 "
     >
       {/* LEFT SECTION: TEXT */}
-      <div className="w-full mt-16 sm:mt-24 md:mt-28 lg:mt-0 px-4 sm:px-6 md:px-10 z-10">
+      <div className="w-full mt-8 sm:mt-24 md:mt-28 lg:mt-0 px-4 sm:px-6 md:px-10 sm:justify-center sm:flex ">
         <div>
-          <h1 className="text-3xl sm:text-2xl md:text-3xl lg:text-5xl font-semibold tracking-wider mb-2 text-black">
+          <h1 className="text-3xl sm:text-2xl md:text-4xl lg:text-5xl font-semibold tracking-wider mb-2 text-black">
             Hello
-            <span className="text-3xl sm:text-2xl md:text-3xl lg:text-5xl font-semibold tracking-wider text-orange-500">
+            <span className="text-3xl sm:text-2xl md:text-4xl lg:text-5xl font-semibold tracking-wider text-orange-500">
               {" "}
               I'm Shivam
             </span>
           </h1>
 
-          <p className="text-2xl sm:text-xl md:text-2xl lg:text-5xl font-medium tracking-wider text-gray-400 mb-6">
+          <p className="text-2xl sm:text-xl md:text-3xl lg:text-5xl font-medium tracking-wider text-gray-400 mb-6">
             Software Developer
           </p>
 
@@ -55,7 +55,7 @@ const LandingPage = () => {
       </div>
 
       {/* RIGHT SECTION: 3D MODEL */}
-      <div className="w-full   mb-10 lg:mb-0 flex justify-center items-center">
+      <div className="w-full  lg:mb-0 flex justify-center items-center">
         <div className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]">
           <SplineScene />
         </div>

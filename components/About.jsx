@@ -40,8 +40,8 @@ const About = () => {
         ease: "none",
         scrollTrigger: {
           trigger: aboutRef.current,
-          start: "top -30%",
-          end: "bottom-=5% top",
+          start: "top -25%",
+          end: "bottom-=10% top",
           scrub: true,
           // markers: true, // for debugging, remove later
         },
